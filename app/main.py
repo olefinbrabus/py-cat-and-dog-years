@@ -4,10 +4,10 @@ def get_human_age(cat_age: int, dog_age: int) -> list:
         if animal_age > 14:
             human_age += 1
             animal_age -= 15
-        if animal_age >= 9:
-            human_age += 1
-            animal_age -= 9
-        while animal_age >= age_correlation:
+            if animal_age >= 9:
+                human_age += 1
+                animal_age -= 9
+        while animal_age >= age_correlation and human_age >= 2:
             human_age += 1
             animal_age -= age_correlation
 
